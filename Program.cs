@@ -1,9 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
 
 namespace SequentialCollections
 {
@@ -16,14 +12,26 @@ namespace SequentialCollections
             myQueue.Enqueue("Second");
             myQueue.Enqueue("Third");
             myQueue.Enqueue("Fourth");
-            //Queue<string> copyQueue = new Queue<string>(myQueue.ToArray());
+            Console.WriteLine("Queue:");
             while (myQueue.Count >= 1)
             {
                 if (!String.IsNullOrEmpty(myQueue.Peek()))
                 {
                     Console.WriteLine(myQueue.Dequeue());
                 }
-
+            }
+            Stack<string> myStack = new Stack<string>();
+            myStack.Push("First");
+            myStack.Push("Second");
+            myStack.Push("Third");
+            myStack.Push("Fourth");
+            Console.WriteLine("STack:");
+            while (myStack.Count >= 1)
+            {
+                if (!String.IsNullOrEmpty(myStack.Peek()))
+                {
+                    Console.WriteLine(myStack.Pop());
+                }
             }
             Console.ReadLine();
         }
